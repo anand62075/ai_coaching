@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coaching Classes</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+
+nav{
+    background:#0d1b2a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+nav h1{
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00b4d8;
+}
+
+/* Hero Section */
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h2{
+    font-size:55px;
+    margin-bottom:20px;a
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero-content button{
+    padding:15px 35px;
+    border:none;
+    background:#00b4d8;
+    color:white;
+    font-size:20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:#0077b6;
+}
+
+/* Features */
+
+.features{
+    padding:70px 50px;
+    text-align:center;
+}
+
+.features h2{
+    font-size:40px;
+    margin-bottom:50px;
+    color:#0d1b2a;
+}
+
+.feature-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:80px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0077b6;
+}
+
+.card p{
+    color:#555;
+}
+
+/* Classes Section */
+
+.classes{
+    background:#e9f5ff;
+    padding:70px 50px;
+    text-align:center;
+}
+
+.classes h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.class-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.class-item{
+    background:#0077b6;
+    color:white;
+    padding:20px 35px;
+    border-radius:10px;
+    font-size:22px;
+}
+
+/* Time Table */
+
+.timetable{
+    padding:70px 50px;
+}
+
+.timetable h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+table th, table td{
+    border:1px solid #ccc;
+    padding:15px;
+    text-align:center;
+}
+
+table th{
+    background:#0077b6;
+    color:white;
+}
+
+/* Contact */
+
+.contact{
+    background:#0d1b2a;
+    color:white;
+    padding:60px 50px;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#000814;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+    }
+
+    .hero-content h2{
+        font-size:35px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav>
+    <h1>AI Coaching</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Classes</a></li>
+        <li><a href="#">Notes</a></li>
+        <li><a href="#">Live Class</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h2>Welcome to AI Coaching Classes</h2>
+
+        <p>
+            5th to 12th Complete Smart Learning Platform
+        </p>
+
+        <button onclick="joining_course()">Join Now</button>
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<section class="features">
+
+    <h2>Our Features</h2>
+
+    <div class="feature-box">
+
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
+            <h3>Live Classes</h3>
+            <p>Attend live online classes with expert teachers.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
+            <h3>PDF Notes</h3>
+            <p>Download all study material and notes easily.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/891/891419.png">
+            <h3>Fees Payment</h3>
+            <p>Pay fees online using UPI, Card and Net Banking.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+            <h3>AI Support</h3>
+            <p>Ask doubts anytime using AI Assistant.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Classes -->
+
+<section class="classes">
+
+    <h2>Available Classes</h2>
+
+    <div class="class-list">
+
+        <div class="class-item">Class 5</div>
+        <div class="class-item">Class 6</div>
+        <div class="class-item">Class 7</div>
+        <div class="class-item">Class 8</div>
+        <div class="class-item">Class 9</div>
+        <div class="class-item">Class 10</div>
+        <div class="class-item">Class 11</div>
+        <div class="class-item">Class 12</div>
+
+    </div>
+
+</section>
+
+<!-- Time Table -->
+
+<section class="timetable">
+
+    <h2>Class Time Table</h2>
+
+    <table>
+
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>Mathematics</td>
+            <td>5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>Science</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>English</td>
+            <td>4:30 PM</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>Physics</td>
+            <td>5:30 PM</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>Chemistry</td>
+            <td>6:30 PM</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<!-- Contact -->
+
+<section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>📍 AI Coaching Classes, Bihar</p>
+    <p>📞 +91 9876543210</p>
+    <p>📧 aicoaching@gmail.com</p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    <p>
+        © 2026 AI Coaching Classes | All Rights Reserved
+    </p>
+</footer>
+
+</body>
+</html>
+<script>
+    function joining_course(){
+        document.write("hello i am padam");
+    }
+</script>
